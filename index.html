@@ -177,9 +177,11 @@
   function handleChangedValue(event) {
     let value = event.target.value.getUint8(0)
     var now = new Date()
-    document.getElementById("data").innerHTML = value;
     var newval = value/255;
+    document.getElementById("data").innerHTML = newval*100;
+    
     setGaugeValue(gaugeElement, newval);
+    
     console.log('> ' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() + ' Data is ' + value)
   }
 
