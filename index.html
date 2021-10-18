@@ -178,7 +178,8 @@
     let value = event.target.value.getUint8(0)
     var now = new Date()
     document.getElementById("data").innerHTML = value;
-    setGaugeValue(gaugeElement, value);
+    var newval = value/255;
+    setGaugeValue(gaugeElement, newval);
     console.log('> ' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() + ' Data is ' + value)
   }
 
