@@ -178,7 +178,7 @@
     let value = event.target.value.getUint8(0)
     var now = new Date()
     var newval = value/255;
-    document.getElementById("data").innerHTML = newval*100;
+    document.getElementById("data").innerHTML = Math.round(newval*100);
     
     setGaugeValue(gaugeElement, newval);
     
